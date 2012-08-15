@@ -1,8 +1,4 @@
-source 'https://rubygems.org' 
+source 'https://rubygems.org'
 
-gem "rake"
-gem "rspec"
-gem "guard-rspec"
-
-gem 'simplecov', :require => false, :group => :test
-
+# Specify your gem's dependencies in ubyray.gemspec
+gemspec
