@@ -9,11 +9,11 @@ module Ubyray
     end
 
     rest = word[1..-1]
-    rest.capitalize! if self.starts_with_capital?(word)
+    rest.capitalize! if self.capitalized?(word)
     return "#{rest}#{letter}ay"
   end
   
-  def self.starts_with_capital?(word)
+  def self.capitalized?(word)
     if RUBY_VERSION < "1.9"
       ord = word[0]
     else

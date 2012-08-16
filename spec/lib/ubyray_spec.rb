@@ -10,11 +10,11 @@ describe Ubyray do
   end
 
   it "should detect if word start with a capital" do
-    Ubyray.starts_with_capital?("Foo").should eq true
+    Ubyray.capitalized?("Foo").should eq true
   end
 
   it "should detect if word doesn't start with a capital" do
-    Ubyray.starts_with_capital?("bar").should eq false
+    Ubyray.capitalized?("bar").should eq false
   end
 end
 
