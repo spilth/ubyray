@@ -7,9 +7,11 @@ module Ubyray
     if vowelized?(word)
       return "#{word}way"
     else
-      rest = word[1..-1]
-      rest.capitalize! if self.capitalized?(word)
-      return "#{rest}#{letter}ay"
+      split_index = self.first_vowel_index(word)
+      rest = word[0..split_index-1].downcase
+      start = word[split_index..-1]
+      start.capitalize! if self.capitalized?(word)
+      return "#{start}#{rest}ay"
     end
   end
 
@@ -23,10 +25,24 @@ module Ubyray
     letter
   end
 
+  def self.first_vowel_index(word)
+    i = 0
+    word.split(//).each do |letter|
+      if self.vowel?(letter)
+        return i
+      end
+      i += 1
+    end
+  end
+
+  def self.vowel?(letter)
+    ["a","e","i","o","u"].include?(letter.downcase)
+  end
+
   def self.vowelized?(word)
     letter = self.first_letter(word)
 
-    ["a","e","i","o","u"].include?(letter.downcase)
+    self.vowel?(letter)
   end
 
   def self.capitalized?(word)
