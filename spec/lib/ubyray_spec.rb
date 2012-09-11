@@ -6,7 +6,7 @@ describe Ubyray do
   end
 
   it "should translate words starting with a single upper case consanant" do
-    Ubyray.translate("ruby").should eq "ubyray"
+    Ubyray.translate("Ruby").should eq "Ubyray"
   end
   
   it "should translate words starting with multiple lower case consanants" do
@@ -23,6 +23,10 @@ describe Ubyray do
   
   it "should translate words starting with a upper case vowel" do
     Ubyray.translate("Apple").should eq "Appleway"
+  end
+
+  it "should translate sentences" do
+    Ubyray.translate("Hello world").should eq "Ellohay orldway"
   end
 
   it "should find the index of the first vowel in a word" do
