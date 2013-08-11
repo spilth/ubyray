@@ -1,12 +1,12 @@
 Feature: Translating
 
   Scenario Outline: Translate Words
-    Given the input "<Input>"
+    Given the word "<Original>"
     When the translator is run
-    Then the output should be "<Output>"
+    Then it generates the translation "<Translated>"
 
     Examples:
-      | Input | Output |
-      | ruby  | ubyray |
-      | Ruby  | Ubyray |
+      | Original | Translated |
+      | ruby     | ubyray     |
+      | Ruby     | Ubyray     |
 

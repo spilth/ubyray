@@ -1,4 +1,4 @@
-Given /^the input "(.*?)"$/ do |input|
+Given /^the word "(.*?)"$/ do |input|
   @word = input
 end
 
@@ -6,7 +6,7 @@ When /^the translator is run$/ do
   @output = Ubyray.translate_word(@word)
 end
 
-Then /^the output should be "(.*?)"$/ do |output|
+Then /^it generates the translation "(.*?)"$/ do |output|
   @output.should == output
 end
 
