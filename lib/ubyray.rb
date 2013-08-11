@@ -42,8 +42,12 @@ module Ubyray
     i
   end
 
+  def self.letter?(character)
+    ("a".."z").include?(character.downcase)
+  end
+
   def self.vowel?(letter)
-    ["a","e","i","o","u"].include?(letter.downcase)
+    ["a","e","i","o","u","y"].include?(letter.downcase)
   end
 
   def self.vowelized?(word)
@@ -55,6 +59,12 @@ module Ubyray
   def self.capitalized?(word)
     ord = RUBY_VERSION < "1.9" ? word[0] : word[0].ord
     ord < 97
+  end
+
+  def self.to_a(sentence)
+    return [""] if sentence == ""
+    
+    pieces = []
   end
 
 end
