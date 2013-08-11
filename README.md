@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/spilth/ubyray.png?branch=master)](http://travis-ci.org/spilth/ubyray)i [![Code Climate](https://codeclimate.com/github/spilth/ubyray.png)](https://codeclimate.com/github/spilth/ubyray)
+[![Build Status](https://secure.travis-ci.org/spilth/ubyray.png?branch=master)](http://travis-ci.org/spilth/ubyray) [![Code Climate](https://codeclimate.com/github/spilth/ubyray.png)](https://codeclimate.com/github/spilth/ubyray)
 
 # [Ubyray](http://spilth.org/ubyray/)
 
