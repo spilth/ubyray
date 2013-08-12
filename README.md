@@ -2,7 +2,21 @@
 
 # [Ubyray](http://spilth.org/ubyray/)
 
-This is a project for practicing Ruby programming, using RSpec, Travis CI and related tools.
+A Ruby library for translating English to Pig Latin.
+
+This is also a project for practicing Ruby programming and getting familiar with a number of processes and tools used in the Ruby ecosystem, such as:
+
+- [Bundler](http://bundler.io)
+- [Rake](http://rake.rubyforge.org)
+- [RSpec](http://rspec.info)
+- [Cucumber](http://cukes.info)
+- [Guard](http://guardgem.org)
+- [TravisCI](https://travis-ci.org)
+- [Code Climate](https://codeclimate.com)
+- [RubyGems](http://rubygems.org)
+- [Ruby Doc](http://ruby-doc.org)
+- [Yard](http://yardoc.org)
+- [Relish](https://www.relishapp.com)
 
 ## Installation
 
@@ -14,13 +28,16 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it manually with:
 
     $ gem install ubyray
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'ubyray'
+    word = 'Ruby'
+    translated = Ubyray.translate(word)
+    puts "The word '#{word}' in Pig Latin is '#{translated}'."
 
 ## Contributing
 
@@ -29,3 +46,13 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Ubyray on...
+
+- [GitHub](https://github.com/spilth/ubyray/)
+- [Travis CI](https://travis-ci.org/spilth/ubyray/)
+- [Code Climate](https://codeclimate.com/github/spilth/ubyray/)
+- [Ruby Doc](http://www.rubydoc.org/github/spilth/ubyray)
+- [Relish](http://relishapp.com/spilth/ubyray/)
+- [RubyGems](https://rubygems.org/gems/ubyray/)
+
