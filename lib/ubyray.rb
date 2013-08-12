@@ -24,10 +24,6 @@ module Ubyray
     end
   end
 
-  def self.first_letter(word)
-    RUBY_VERSION < '1.9' ? word[0].chr.downcase : word[0].downcase
-  end
-
   def self.first_vowel_index(word)
     i = 0
     word.split(//).each do |letter|
@@ -48,12 +44,11 @@ module Ubyray
   end
 
   def self.vowelized?(word)
-    vowel? first_letter(word)
+    vowel? word[0]
   end
 
   def self.capitalized?(word)
-    ord = RUBY_VERSION < '1.9' ? word[0] : word[0].ord
-    ord < 97
+    word[0].ord < 97
   end
 
   def self.to_a(sentence)
